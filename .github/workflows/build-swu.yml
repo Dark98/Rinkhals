@@ -31,8 +31,8 @@ jobs:
         context: .
         build-args: version=${{ github.sha }}
         outputs: type=local,dest=./build/dist
-        cache-from: type=registry,ref=ghcr.io/${{ github.repository_owner }}/rinkhals:buildcache
-        cache-to: type=registry,ref=ghcr.io/${{ github.repository_owner }}/rinkhals:buildcache,mode=max
+        cache-from: type=registry,ref=ghcr.io/dark98/rinkhals:buildcache
+        cache-to: type=registry,ref=ghcr.io/dark98/rinkhals:buildcache,mode=max
 
     - name: Upload artifact for K2P, K3
       uses: actions/upload-artifact@v4
